@@ -1,0 +1,7 @@
+include ../button/button
+
+mixin modal
+    .modal&attributes(attributes)
+        +button({class:'modal__close', value: 'Закрыть'})
+        block 
+        

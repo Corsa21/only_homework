@@ -1,0 +1,10 @@
+include ../button/button
+
+mixin mainComponent
+    .mainComponent&attributes(attributes)
+        .mainComponent__wrapper 
+            p.mainComponent__description Значение счетчика на активном слайде:
+            p.mainComponent__value 0
+            +button({class: 'counter__btn mainComponent__button', value: 'Открыть'})
+            block
+        

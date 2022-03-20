@@ -1,2 +1,2 @@
-mixin button(text)
-    button.button&attributes(attributes)!= text
+mixin button(props)
+    button.button(class=props.class)= props.value

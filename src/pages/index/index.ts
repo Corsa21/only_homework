@@ -1,12 +1,12 @@
 import { IView, IViewData } from '@barba/core';
 
 import { findComponent } from '@common/utils';
-import Counter from '@components/counter/counter';
+import MainComponent from '@components/mainComponent/mainComponent';
 
 export default {
     namespace: 'index',
     beforeEnter(data: IViewData) {},
     afterEnter(data: IViewData) {
-        new Counter(findComponent('counter'));
+        const mainComponent = new MainComponent(findComponent('mainComponent'));
     },
 } as IView;

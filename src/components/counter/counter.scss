@@ -1,14 +1,37 @@
 .counter {
-  display: flex;
-  flex-direction: column;
-
-  &__wrapper {
     display: flex;
     align-items: center;
-  }
 
-  &__clicks {
-    text-align: center;
-    margin-top: 10px;
-  }
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        border-radius: 50%;
+        margin-bottom: 90px;
+        background: #3877EE;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    &__increment {
+        padding: 15px 18.5px;
+    }
+
+    &__decrement {
+        padding: 15px 19.5px;
+    }
+
+    &__value {
+        margin-bottom: 90px;
+        margin-left: 52px;
+        margin-right: 52px;
+        padding: 13px 21px;
+        border: 2px solid #303E58;
+        border-radius: 50%;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 30px;
+        color: #42567A;
+    }
 }

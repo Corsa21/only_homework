@@ -1,0 +1,14 @@
+.counter {
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__clicks {
+    text-align: center;
+    margin-top: 10px;
+  }
+}

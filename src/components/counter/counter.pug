@@ -1,0 +1,10 @@
+include ../button/button
+include ../input/input
+
+mixin counter(props)
+    .counter&attributes(attributes)
+        .counter__wrapper
+            +button('-').counter__button-prev
+            +input({ defaultValue: props && props.count || 0 })(type='number')
+            +button('+').counter__button-next
+        .counter__clicks Clicks: 0

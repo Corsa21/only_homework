@@ -1,20 +1,18 @@
-import { FindComponentOptions, IRootComponent } from '@common/types';
+import { IRootComponent } from '@common/types';
 
-export const findComponent = <T extends Element>(
+export const findComponent = <T extends Element = Element>(
     name: string,
-    options?: FindComponentOptions
+    root?: Element
 ): IRootComponent<T> => ({
     name,
-    node: (options?.node ?? document).querySelector(`.${name}`),
+    node: (root ? root : document).querySelector(`.${name}`),
 });
 
-export const findComponents = <T extends Element>(
+export const findComponents = <T extends Element = Element>(
     name: string,
-    options?: FindComponentOptions
+    root?: Element
 ): IRootComponent<T>[] =>
-    Array.from((options?.node ?? document).querySelectorAll(`.${name}`)).map(
-        (node: T) => ({
-            name,
-            node,
-        })
-    );
+    Array.from((root ? root : document).querySelectorAll(`.${name}`)).map((node: T) => ({
+        name,
+        node,
+    }));

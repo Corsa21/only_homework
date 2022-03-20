@@ -1,0 +1,22 @@
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: #F4F5F9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+
+    &_open {
+      display: block;  
+    }
+
+    &__close {
+        margin: 0 auto;
+        margin-top: vh(32);
+        display: block;
+    }
+    
+}
+
+

@@ -5,7 +5,7 @@
   "author": "Vladislav Grigoriev",
   "license": "MIT",
   "scripts": {
-    "dev": "webpack serve --config ./config/webpack.dev.config.ts",
+    "dev": "webpack serve --config ./config/webpack.dev.config.ts & ts-node ./scripts/watch.ts",
     "build": "webpack --config ./config/webpack.prod.config.ts",
     "watch": "ts-node ./scripts/watch.ts",
     "generate:paths": "ts-node ./scripts/paths.ts",
@@ -22,6 +22,7 @@
     "@babel/runtime": "^7.16.3",
     "@types/mini-css-extract-plugin": "^2.4.0",
     "@types/node": "^16.11.12",
+    "@types/swiper": "^6.0.0",
     "@types/webpack": "^5.28.0",
     "@types/webpack-dev-server": "^4.5.0",
     "@typescript-eslint/eslint-plugin": "^5.6.0",
@@ -64,6 +65,7 @@
   "dependencies": {
     "@barba/core": "^2.9.7",
     "modern-normalize": "^1.1.0",
-    "rxjs": "^7.5.5"
+    "rxjs": "^7.5.5",
+    "swiper": "^8.0.7"
   }
 }

@@ -1,0 +1,12 @@
+include ../counter/counter
+
+mixin slider
+    .swiper.slider&attributes(attributes)
+        .swiper-wrapper.slider__wrapper 
+            each slide in [{img:1,count:55},{img:2,count:13},{img:3,count:29}]
+                .swiper-slide.slider__slide 
+                    +img({src:`/images/slide${slide.img}.jpg`}).slider__img
+                    +counter(slide.count)
+        button.swiper-button-prev.slider__navButton.slider__prev!="<"
+        button.swiper-button-next.slider__navButton.slider__next!=">"
+
